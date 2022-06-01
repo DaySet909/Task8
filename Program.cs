@@ -10,20 +10,20 @@ namespace Task8
     {
         static void Main(string[] args)
         {
-            int howMuchGrandmother;
+            int amountGrandmothers;
             int hour = 60;
-            int minutes = 10;
-            int hoursInHospital;
-            int minutesInHospital;
+            int minutesForOneHuman = 10;
+            int hoursWatching;
+            int minutesWatching;
 
             Console.WriteLine("Количество старушек перед вами");
-            howMuchGrandmother = Convert.ToInt32(Console.ReadLine());
+            amountGrandmothers = Convert.ToInt32(Console.ReadLine());
              
-            minutes = howMuchGrandmother * minutes;
-            hoursInHospital = minutes / hour;
-            minutesInHospital = minutes - hour * hoursInHospital;
+            minutesForOneHuman = amountGrandmothers * minutesForOneHuman;
+            hoursWatching = minutesForOneHuman / hour;
+            minutesWatching = minutesForOneHuman % hoursWatching;
 
-            Console.WriteLine("Вы должны отстоять в очереди: {0} часа, {1} минут", hoursInHospital, minutesInHospital); 
+            Console.WriteLine("Вы должны отстоять в очереди: {0} часа, {1} минут", hoursWatching, minutesWatching); 
 
         }
     }
