@@ -11,7 +11,7 @@ namespace Task8
         static void Main(string[] args)
         {
             int amountGrandmothers;
-            int hour = 60;
+            int minutesInHour = 60;
             int minutesForOneHuman = 10;
             int hoursWatching;
             int minutesWatching;
@@ -20,8 +20,8 @@ namespace Task8
             amountGrandmothers = Convert.ToInt32(Console.ReadLine());
              
             minutesForOneHuman = amountGrandmothers * minutesForOneHuman;
-            hoursWatching = minutesForOneHuman / hour;
-            minutesWatching = minutesForOneHuman % hoursWatching;
+            hoursWatching = minutesForOneHuman / minutesInHour;
+            minutesWatching = minutesForOneHuman - minutesInHour * hoursWatching;
 
             Console.WriteLine("Вы должны отстоять в очереди: {0} часа, {1} минут", hoursWatching, minutesWatching); 
 
